@@ -1,9 +1,77 @@
-<html>
-<head><title></title></head>
-
-<body>
-
-{{ content }}
-
-</body>
-</html>
+﻿{% extends "exposure/base.html" %}
+{% block content %}
+<fieldset>
+    <legend>Basic</legend>
+    <h2>To help us determine the likelihook of exposure, we need a few pieces of information:</h2>
+    <label for="state">What state do you intedt to gather in?</label>
+    <select name="state">
+        <option value="oregon">Oregon</option>
+        <option value="washington">Washington</option>
+    </select>
+    <br />
+    <label for="county"> What county will you gather in?</label>
+    <select name="county">
+        <option value="multnomah">Multnomah</option>
+        <option value="washington">Washington</option>
+        <option value="marion">Marion</option>
+        <option value="yamhill">Yamhill</option>
+    </select>
+    <h3>Please provide the vaccination status of the people at the gathering by entering the number of people who:</h3>
+    <label for="pfizer">Have received the PFIZER vaccine:</label>
+    <input name="pfizer" /> <span>(a number between 1-200)</span>
+    <br />
+    <label for="moderna">Have received the MODERNA vaccine:</label>
+    <input name="pfizer" /> <span>(a number between 1-200)</span>
+    <br />
+    <label for="non-vaccinated">Have NOT RECEIVED a vaccine:</label>
+    <input name="pfizer" /> <span>(a number between 1-200)</span>
+    <p>Total gathering size (from above):</p>
+    <input type="reset" value="Reset Value" />
+    <input type="submit" value="Submit" />
+</fieldset>
+<h2>Results:</h2>
+<fieldset>
+    <legend>Advanced</legend>
+    <h2>Use this tab to enter your own values for variables to calculate the likelihood of exposure</h2>
+    <input type="checkbox" name="override" />
+    <label for="override">Locality override:</label>
+    <input name="override-value" />
+    <br />
+    <!-- If override is selected, state and county drops are disabled-->
+    <label for="state">What state do you intedt to gather in?</label>
+    <select name="state">
+        <option value="oregon">Oregon</option>
+        <option value="washington">Washington</option>
+    </select>
+    <br />
+    <label for="county"> What county will you gather in?</label>
+    <select name="county">
+        <option value="multnomah">Multnomah</option>
+        <option value="washington">Washington</option>
+        <option value="marion">Marion</option>
+        <option value="yamhill">Yamhill</option>
+    </select>
+    <h3>Enter your own vaccination efficacy values: Provide a presumed efficacy percentage and the number of people at that percentage.</h3>
+    <label for="efficacy-percent">Efficacy</label>
+    <input name="efficacy-percent" />
+    <span>%</span>
+    <input name="efficacy-count" />
+    <span>(a number between 1-200)</span>
+    <br />
+    <button>+ Add Row</button>
+    <p>Total gathering size (from above):</p>
+    <h3>Options</h3>
+    <label for="ascertainment">Asertainment Bias:</label>
+    <input name="ascrtainment" />
+    <br />
+    <label for="transmission">Transmission Rate:</label>
+    <input name="transmission" />
+    <br />
+    <label for="incubation">Incubation Rate:</label>
+    <input name="incubation" />
+    <br />
+    <input type="reset" value="Reset Value" />
+    <input type="submit" value="Submit" />
+</fieldset>
+<h2>Results:</h2>
+{% endblock content %}

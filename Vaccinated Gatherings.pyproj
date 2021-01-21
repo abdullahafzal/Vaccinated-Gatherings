@@ -35,6 +35,9 @@
     <Compile Include="exposure\migrations\__init__.py" />
     <Compile Include="exposure\models.py" />
     <Compile Include="exposure\tests.py" />
+    <Compile Include="exposure\urls.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="exposure\views.py" />
     <Compile Include="exposure\__init__.py" />
     <Compile Include="manage.py" />
@@ -44,7 +47,11 @@
     <Compile Include="Vaccinated_Gatherings\wsgi.py" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="exposure\templates\exposure\about.html" />
+    <Content Include="exposure\templates\exposure\base.html" />
+    <Content Include="exposure\templates\exposure\feedback.html" />
     <Content Include="exposure\templates\exposure\index.html" />
+    <Content Include="exposure\templates\exposure\references.html" />
     <Content Include="requirements.txt" />
   </ItemGroup>
   <ItemGroup>
