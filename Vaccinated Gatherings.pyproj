@@ -47,7 +47,7 @@
     <Compile Include="Vaccinated_Gatherings\wsgi.py" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="County population with FIPS.csv" />
+    <Content Include="County_pop.csv" />
     <Content Include="exposure\templates\exposure\about.html" />
     <Content Include="exposure\templates\exposure\base.html" />
     <Content Include="exposure\templates\exposure\feedback.html" />
