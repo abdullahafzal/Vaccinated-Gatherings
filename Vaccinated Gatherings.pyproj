@@ -48,6 +48,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="County_pop.csv" />
+    <Content Include="County_pop.xlsx" />
     <Content Include="exposure\templates\exposure\about.html" />
     <Content Include="exposure\templates\exposure\base.html" />
     <Content Include="exposure\templates\exposure\feedback.html" />
